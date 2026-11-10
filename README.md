@@ -124,7 +124,7 @@ Bot commits from Dependabot, Renovate, GitHub Actions and similar are skipped.
 ```
 Co-Authored-By: <product name> <noreply@vendor.com>
 Clanker-Model: <claude | codex | copilot | cursor | gemini | …>
-Clanker-Category: <code | bugfix | tests | docs>
+Clanker-Category: bugfix        (only on bug fixes)
 ```
 
 The markers go in **commit messages, never in the code**. That way they don't clutter files, don't go stale when someone edits a line, and don't cause merge conflicts.

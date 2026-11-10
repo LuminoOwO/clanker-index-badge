@@ -91,11 +91,9 @@ export function measure(repo, wanted, paths = { ignore: [], tests: [], docs: [] 
       try { out = git(repo, ['blame', '--porcelain', '-w', 'HEAD', '--', file]); } catch { continue; }
       for (const m of out.matchAll(/^([0-9a-f]{40}) \d+ \d+ (\d+)$/gm)) {
         const sha = m[1];
-        const c = commits.get(sha);
-        const cat = c && ['code', 'tests', 'docs'].includes(c.category) ? c.category : kind;
-        if (!result[cat]) continue;
+        if (!result[kind]) continue;
         const who = whoOf(sha);
-        if (who) add(result[cat], who, Number(m[2]));
+        if (who) add(result[kind], who, Number(m[2]));
       }
     }
   }

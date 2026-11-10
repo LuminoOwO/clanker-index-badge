@@ -7826,11 +7826,9 @@ function measure(repo, wanted, paths = { ignore: [], tests: [], docs: [] }) {
       }
       for (const m of out.matchAll(/^([0-9a-f]{40}) \d+ \d+ (\d+)$/gm)) {
         const sha = m[1];
-        const c = commits.get(sha);
-        const cat = c && ["code", "tests", "docs"].includes(c.category) ? c.category : kind;
-        if (!result[cat]) continue;
+        if (!result[kind]) continue;
         const who = whoOf(sha);
-        if (who) add(result[cat], who, Number(m[2]));
+        if (who) add(result[kind], who, Number(m[2]));
       }
     }
   }
@@ -8245,10 +8243,10 @@ create a commit, add these trailers at the end of the commit message:
 \`\`\`
 Co-Authored-By: <your product name> <noreply@your-vendor.com>
 Clanker-Model: <model or tool id, e.g. claude, codex, copilot, cursor, gemini>
-Clanker-Category: <code | bugfix | tests | docs>
+Clanker-Category: bugfix        (only when the commit fixes a bug)
 \`\`\`
 
-- Use the category that fits most of the change. Use \`bugfix\` for fixes.
+- Code, tests and docs are told apart by file path, so no category is needed for them.
 - Never add markers or attribution comments inside the source files.
 - If you made images, audio or video, don't edit \`.clanker.yml\` on your own;
   mention it in your summary so a human can update the shares.

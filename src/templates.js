@@ -44,10 +44,10 @@ create a commit, add these trailers at the end of the commit message:
 \`\`\`
 Co-Authored-By: <your product name> <noreply@your-vendor.com>
 Clanker-Model: <model or tool id, e.g. claude, codex, copilot, cursor, gemini>
-Clanker-Category: <code | bugfix | tests | docs>
+Clanker-Category: bugfix        (only when the commit fixes a bug)
 \`\`\`
 
-- Use the category that fits most of the change. Use \`bugfix\` for fixes.
+- Code, tests and docs are told apart by file path, so no category is needed for them.
 - Never add markers or attribution comments inside the source files.
 - If you made images, audio or video, don't edit \`.clanker.yml\` on your own;
   mention it in your summary so a human can update the shares.
