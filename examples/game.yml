@@ -1,0 +1,11 @@
+# Sample: an indie game. Every category in use.
+style: clanker
+categories:
+  code:   { claude: 52, copilot: 14, deepseek: 10, chatgpt: 8, human: 16 }
+  bugfix: { claude: 40, codex: 25, cursor: 15, human: 20 }
+  tests:  { claude: 60, copilot: 20, human: 20 }
+  docs:   { chatgpt: 45, claude: 35, human: 20 }
+  ideas:  { chatgpt: 25, gemini: 20, human: 55 }
+  images: { midjourney: 50, flux: 25, nano banana: 15, human: 10, estimated: true }
+  audio:  { suno: 60, elevenlabs: 25, human: 15 }
+  video:  { veo: 50, runway: 30, human: 20 }

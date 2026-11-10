@@ -1,0 +1,5 @@
+# Sample: 20 different AIs in one repo. The small ones are grouped as "other".
+style: clanker
+categories:
+  code: { claude: 30, deepseek: 12, chatgpt: 10, gemini: 8, qwen: 6, llama: 5, copilot: 4, mistral: 3, grok: 3, codex: 3,
+          kimi: 1.5, glm: 1.5, minimax: 1.5, phi: 1, nova: 1, command: 1, granite: 1, nemotron: 1, ernie: 1, sonar: 1, human: 3 }

@@ -1,0 +1,10 @@
+# Sample: a backend API. No media, plus code review and translations.
+style: serious
+categories:
+  code:         { claude: 30, deepseek: 25, qwen: 15, human: 30 }
+  bugfix:       { claude: 30, grok: 20, human: 50 }
+  tests:        { copilot: 40, claude: 35, human: 25 }
+  docs:         { claude: 50, mistral: 20, human: 30 }
+  review:       { coderabbit: 55, copilot: 25, human: 20 }
+  translations: { deepl: 70, chatgpt: 20, human: 10 }
+  ideas:        { chatgpt: 10, human: 90 }

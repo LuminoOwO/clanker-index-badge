@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="646" viewBox="0 0 840 646" role="img" aria-labelledby="t">
+<title id="t">Clanker Index, 78% AI overall. Code: 84% AI (Claude 52%, GitHub Copilot 14%, DeepSeek 10%, ChatGPT 8%, Human 16%); Bug fixing: 80% AI (Claude 40%, Codex 25%, Cursor 15%, Human 20%); Tests: 80% AI (Claude 60%, GitHub Copilot 20%, Human 20%); Docs: 80% AI (ChatGPT 45%, Claude 35%, Human 20%); Ideas &amp; design: 45% AI (ChatGPT 25%, Gemini 20%, Human 55%); Images: 90% AI (Midjourney 50%, Flux 25%, Nano Banana 15%, Human 10%); Audio: 85% AI (Suno 60%, ElevenLabs 25%, Human 15%); Video: 80% AI (Veo 50%, Runway 30%, Human 20%).</title>
+<defs><pattern id="f0" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#6e7781"/><rect width="3" height="6" fill="#111111"/></pattern><linearGradient id="f1" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#4285F4"/><stop offset="50%" stop-color="#9B72CB"/><stop offset="100%" stop-color="#D96570"/></linearGradient><pattern id="f2" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="6" height="6" fill="#6e7781"/><rect width="3" height="6" fill="#111111"/></pattern><pattern id="f3" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(90)"><rect width="6" height="6" fill="#6e7781"/><rect width="3" height="6" fill="#111111"/></pattern></defs>
+<rect x="1" y="1" width="838" height="644" rx="10" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+<g font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace">
+<text x="24" y="44" font-size="20" font-weight="800" letter-spacing="1" fill="#1f2328">CLANKER INDEX</text>
+<text x="816" y="44" text-anchor="end" font-size="14" fill="#59636e"><tspan font-size="22" font-weight="800" fill="#9A6700">78%</tspan> clanker overall</text>
+<line x1="24" y1="58" x2="816" y2="58" stroke="#d0d7de" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="24" y="87" font-size="13" font-weight="700" letter-spacing="1" fill="#1f2328">CODE</text>
+<line x1="69.2" y1="83" x2="720.2" y2="83" stroke="#d0d7de" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round"/>
+<text x="816" y="87" text-anchor="end" font-size="13" fill="#59636e"><tspan font-weight="800" fill="#9A6700">84%</tspan> clanker</text>
+<rect x="24.00" y="96" width="407.68" height="26" rx="2" fill="#D97757"/>
+<text x="33.00" y="113" font-size="11" font-weight="700" fill="#111111">claude 52%</text>
+<rect x="433.68" y="96" width="109.76" height="26" rx="2" fill="#8957E5"/>
+<text x="442.68" y="113" font-size="11" font-weight="700" fill="#ffffff">copilot 14%</text>
+<rect x="545.44" y="96" width="78.40" height="26" rx="2" fill="#4D6BFE"/>
+<rect x="625.84" y="96" width="62.72" height="26" rx="2" fill="#10A37F"/>
+<rect x="690.56" y="96" width="125.44" height="26" rx="2" fill="#F2B8A0"/>
+<text x="699.56" y="113" font-size="11" font-weight="700" fill="#111111">meatbag 16%</text>
+<rect x="24" y="130" width="9" height="9" fill="#4D6BFE"/>
+<text x="37" y="138" font-size="11" fill="#59636e"><tspan fill="#1f2328">deepseek</tspan> 10%</text>
+<rect x="132.2" y="130" width="9" height="9" fill="#10A37F"/>
+<text x="145.2" y="138" font-size="11" fill="#59636e"><tspan fill="#1f2328">chatgpt</tspan> 8%</text>
+<text x="24" y="169" font-size="13" font-weight="700" letter-spacing="1" fill="#1f2328">BUG FIXING</text>
+<line x1="122.0" y1="165" x2="720.2" y2="165" stroke="#d0d7de" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round"/>
+<text x="816" y="169" text-anchor="end" font-size="13" fill="#59636e"><tspan font-weight="800" fill="#9A6700">80%</tspan> clanker</text>
+<rect x="24.00" y="178" width="314.40" height="26" rx="2" fill="#D97757"/>
+<text x="33.00" y="195" font-size="11" font-weight="700" fill="#111111">claude 40%</text>
+<rect x="340.40" y="178" width="196.50" height="26" rx="2" fill="#0D6E57"/>
+<text x="349.40" y="195" font-size="11" font-weight="700" fill="#ffffff">codex 25%</text>
+<rect x="538.90" y="178" width="117.90" height="26" rx="2" fill="url(#f0)"/>
+<rect x="543.90" y="184" width="74.0" height="14" rx="2" fill="#111111"/>
+<text x="547.90" y="195" font-size="11" font-weight="700" fill="#ffffff">cursor 15%</text>
+<rect x="658.80" y="178" width="157.20" height="26" rx="2" fill="#F2B8A0"/>
+<text x="667.80" y="195" font-size="11" font-weight="700" fill="#111111">meatbag 20%</text>
+<text x="24" y="233" font-size="13" font-weight="700" letter-spacing="1" fill="#1f2328">TESTS</text>
+<line x1="78.0" y1="229" x2="720.2" y2="229" stroke="#d0d7de" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round"/>
+<text x="816" y="233" text-anchor="end" font-size="13" fill="#59636e"><tspan font-weight="800" fill="#9A6700">80%</tspan> clanker</text>
+<rect x="24.00" y="242" width="472.80" height="26" rx="2" fill="#D97757"/>
+<text x="33.00" y="259" font-size="11" font-weight="700" fill="#111111">claude 60%</text>
+<rect x="498.80" y="242" width="157.60" height="26" rx="2" fill="#8957E5"/>
+<text x="507.80" y="259" font-size="11" font-weight="700" fill="#ffffff">copilot 20%</text>
+<rect x="658.40" y="242" width="157.60" height="26" rx="2" fill="#F2B8A0"/>
+<text x="667.40" y="259" font-size="11" font-weight="700" fill="#111111">meatbag 20%</text>
+<text x="24" y="297" font-size="13" font-weight="700" letter-spacing="1" fill="#1f2328">DOCS</text>
+<line x1="69.2" y1="293" x2="720.2" y2="293" stroke="#d0d7de" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round"/>
+<text x="816" y="297" text-anchor="end" font-size="13" fill="#59636e"><tspan font-weight="800" fill="#9A6700">80%</tspan> clanker</text>
+<rect x="24.00" y="306" width="354.60" height="26" rx="2" fill="#10A37F"/>
+<text x="33.00" y="323" font-size="11" font-weight="700" fill="#111111">chatgpt 45%</text>
+<rect x="380.60" y="306" width="275.80" height="26" rx="2" fill="#D97757"/>
+<text x="389.60" y="323" font-size="11" font-weight="700" fill="#111111">claude 35%</text>
+<rect x="658.40" y="306" width="157.60" height="26" rx="2" fill="#F2B8A0"/>
+<text x="667.40" y="323" font-size="11" font-weight="700" fill="#111111">meatbag 20%</text>
+<text x="24" y="361" font-size="13" font-weight="700" letter-spacing="1" fill="#1f2328">IDEAS &amp; DESIGN</text>
+<line x1="157.2" y1="357" x2="720.2" y2="357" stroke="#d0d7de" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round"/>
+<text x="816" y="361" text-anchor="end" font-size="13" fill="#59636e"><tspan font-weight="800" fill="#9A6700">45%</tspan> clanker</text>
+<rect x="24.00" y="370" width="197.00" height="26" rx="2" fill="#10A37F"/>
+<text x="33.00" y="387" font-size="11" font-weight="700" fill="#111111">chatgpt 25%</text>
+<rect x="223.00" y="370" width="157.60" height="26" rx="2" fill="url(#f1)"/>
+<text x="232.00" y="387" font-size="11" font-weight="700" fill="#ffffff">gemini 20%</text>
+<rect x="382.60" y="370" width="433.40" height="26" rx="2" fill="#F2B8A0"/>
+<text x="391.60" y="387" font-size="11" font-weight="700" fill="#111111">meatbag 55%</text>
+<text x="24" y="425" font-size="13" font-weight="700" letter-spacing="1" fill="#1f2328">IMAGES</text>
+<line x1="86.8" y1="421" x2="712.4" y2="421" stroke="#d0d7de" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round"/>
+<text x="816" y="425" text-anchor="end" font-size="13" fill="#59636e"><tspan font-weight="800" fill="#9A6700">~90%</tspan> clanker</text>
+<rect x="24.00" y="434" width="393.00" height="26" rx="2" fill="#111111"/>
+<text x="33.00" y="451" font-size="11" font-weight="700" fill="#ffffff">midjourney 50%</text>
+<rect x="419.00" y="434" width="196.50" height="26" rx="2" fill="url(#f2)"/>
+<rect x="424.00" y="440" width="60.8" height="14" rx="2" fill="#111111"/>
+<text x="428.00" y="451" font-size="11" font-weight="700" fill="#ffffff">flux 25%</text>
+<rect x="617.50" y="434" width="117.90" height="26" rx="2" fill="#FBBC04"/>
+<text x="626.50" y="451" font-size="11" font-weight="700" fill="#111111">nano banana 15%</text>
+<rect x="737.40" y="434" width="78.60" height="26" rx="2" fill="#F2B8A0"/>
+<rect x="24" y="468" width="9" height="9" fill="#F2B8A0"/>
+<text x="37" y="476" font-size="11" fill="#59636e"><tspan fill="#1f2328">meatbag</tspan> 10%</text>
+<text x="24" y="507" font-size="13" font-weight="700" letter-spacing="1" fill="#1f2328">AUDIO</text>
+<line x1="78.0" y1="503" x2="720.2" y2="503" stroke="#d0d7de" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round"/>
+<text x="816" y="507" text-anchor="end" font-size="13" fill="#59636e"><tspan font-weight="800" fill="#9A6700">85%</tspan> clanker</text>
+<rect x="24.00" y="516" width="472.80" height="26" rx="2" fill="#111111"/>
+<text x="33.00" y="533" font-size="11" font-weight="700" fill="#ffffff">suno 60%</text>
+<rect x="498.80" y="516" width="197.00" height="26" rx="2" fill="url(#f3)"/>
+<rect x="503.80" y="522" width="100.4" height="14" rx="2" fill="#111111"/>
+<text x="507.80" y="533" font-size="11" font-weight="700" fill="#ffffff">elevenlabs 25%</text>
+<rect x="697.80" y="516" width="118.20" height="26" rx="2" fill="#F2B8A0"/>
+<text x="706.80" y="533" font-size="11" font-weight="700" fill="#111111">meatbag 15%</text>
+<text x="24" y="571" font-size="13" font-weight="700" letter-spacing="1" fill="#1f2328">VIDEO</text>
+<line x1="78.0" y1="567" x2="720.2" y2="567" stroke="#d0d7de" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round"/>
+<text x="816" y="571" text-anchor="end" font-size="13" fill="#59636e"><tspan font-weight="800" fill="#9A6700">80%</tspan> clanker</text>
+<rect x="24.00" y="580" width="394.00" height="26" rx="2" fill="#4285F4"/>
+<text x="33.00" y="597" font-size="11" font-weight="700" fill="#111111">veo 50%</text>
+<rect x="420.00" y="580" width="236.40" height="26" rx="2" fill="#111111"/>
+<text x="429.00" y="597" font-size="11" font-weight="700" fill="#ffffff">runway 30%</text>
+<rect x="658.40" y="580" width="157.60" height="26" rx="2" fill="#F2B8A0"/>
+<text x="667.40" y="597" font-size="11" font-weight="700" fill="#111111">meatbag 20%</text>
+<text x="24" y="628" font-size="11" fill="#59636e">&gt; ~ estimated · clanker-index-badge</text>
+</g>
+</svg>

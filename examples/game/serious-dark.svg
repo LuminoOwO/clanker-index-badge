@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="840" height="544" viewBox="0 0 840 544" role="img" aria-labelledby="t">
+<title id="t">AI contribution by category, 78% AI overall. Code: 84% AI (Claude 52%, GitHub Copilot 14%, DeepSeek 10%, ChatGPT 8%, Human 16%); Bug fixing: 80% AI (Claude 40%, Codex 25%, Cursor 15%, Human 20%); Tests: 80% AI (Claude 60%, GitHub Copilot 20%, Human 20%); Docs: 80% AI (ChatGPT 45%, Claude 35%, Human 20%); Ideas &amp; design: 45% AI (ChatGPT 25%, Gemini 20%, Human 55%); Images: 90% AI (Midjourney 50%, Flux 25%, Nano Banana 15%, Human 10%); Audio: 85% AI (Suno 60%, ElevenLabs 25%, Human 15%); Video: 80% AI (Veo 50%, Runway 30%, Human 20%).</title>
+<defs><pattern id="f0" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="4" height="4" fill="#3d444d"/><rect width="2" height="4" fill="#8c959f"/></pattern><pattern id="f1" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#6e7681"/><rect width="3" height="6" fill="#E7E7E7"/></pattern><linearGradient id="f2" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#4285F4"/><stop offset="50%" stop-color="#9B72CB"/><stop offset="100%" stop-color="#D96570"/></linearGradient><pattern id="f3" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(0)"><rect width="6" height="6" fill="#6e7681"/><rect width="3" height="6" fill="#E7E7E7"/></pattern><pattern id="f4" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(90)"><rect width="6" height="6" fill="#6e7681"/><rect width="3" height="6" fill="#E7E7E7"/></pattern></defs>
+<rect x="0.5" y="0.5" width="839" height="543" rx="8" fill="#161b22" stroke="#3d444d" stroke-width="1"/>
+<g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif">
+<text x="24" y="42" font-size="18" font-weight="600" fill="#e6edf3">AI contribution by category</text>
+<text x="816" y="42" text-anchor="end" font-size="14" fill="#9198a1"><tspan font-size="20" font-weight="700" fill="#e6edf3">78%</tspan> AI overall</text>
+<line x1="24" y1="58" x2="816" y2="58" stroke="#3d444d"/>
+<text x="24" y="87" font-size="14" font-weight="600" fill="#e6edf3">Code</text>
+<clipPath id="c0"><rect x="168" y="78" width="570" height="10" rx="5"/></clipPath><g clip-path="url(#c0)">
+<rect x="168.00" y="78" width="292.24" height="10" fill="#D97757"/>
+<rect x="462.24" y="78" width="78.68" height="10" fill="#8957E5"/>
+<rect x="542.92" y="78" width="56.20" height="10" fill="#4D6BFE"/>
+<rect x="601.12" y="78" width="44.96" height="10" fill="#10A37F"/>
+<rect x="648.08" y="78" width="89.92" height="10" fill="url(#f0)"/>
+</g>
+<text x="816" y="88" text-anchor="end" font-size="14" font-weight="700" fill="#e6edf3">84% AI</text>
+<rect x="168" y="99" width="9" height="9" rx="2" fill="#D97757"/>
+<text x="181" y="108" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Claude</tspan> 52%</text>
+<rect x="262.192" y="99" width="9" height="9" rx="2" fill="#8957E5"/>
+<text x="275.192" y="108" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">GitHub Copilot</tspan> 14%</text>
+<rect x="399.8864" y="99" width="9" height="9" rx="2" fill="#4D6BFE"/>
+<text x="412.8864" y="108" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">DeepSeek</tspan> 10%</text>
+<rect x="512.6496" y="99" width="9" height="9" rx="2" fill="#10A37F"/>
+<text x="525.6496" y="108" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">ChatGPT</tspan> 8%</text>
+<rect x="612.5871999999999" y="99" width="9" height="9" rx="2" fill="url(#f0)"/>
+<text x="625.5871999999999" y="108" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Human</tspan> 16%</text>
+<text x="24" y="141" font-size="14" font-weight="600" fill="#e6edf3">Bug fixing</text>
+<clipPath id="c1"><rect x="168" y="132" width="570" height="10" rx="5"/></clipPath><g clip-path="url(#c1)">
+<rect x="168.00" y="132" width="225.60" height="10" fill="#D97757"/>
+<rect x="395.60" y="132" width="141.00" height="10" fill="#5BD0A8"/>
+<rect x="538.60" y="132" width="84.60" height="10" fill="url(#f1)"/>
+<rect x="625.20" y="132" width="112.80" height="10" fill="url(#f0)"/>
+</g>
+<text x="816" y="142" text-anchor="end" font-size="14" font-weight="700" fill="#e6edf3">80% AI</text>
+<rect x="168" y="153" width="9" height="9" rx="2" fill="#D97757"/>
+<text x="181" y="162" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Claude</tspan> 40%</text>
+<rect x="262.192" y="153" width="9" height="9" rx="2" fill="#5BD0A8"/>
+<text x="275.192" y="162" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Codex</tspan> 25%</text>
+<rect x="352.8224" y="153" width="9" height="9" rx="2" fill="url(#f1)"/>
+<text x="365.8224" y="162" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Cursor</tspan> 15%</text>
+<rect x="445.74240000000003" y="153" width="9" height="9" rx="2" fill="url(#f0)"/>
+<text x="458.74240000000003" y="162" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Human</tspan> 20%</text>
+<text x="24" y="195" font-size="14" font-weight="600" fill="#e6edf3">Tests</text>
+<clipPath id="c2"><rect x="168" y="186" width="570" height="10" rx="5"/></clipPath><g clip-path="url(#c2)">
+<rect x="168.00" y="186" width="339.60" height="10" fill="#D97757"/>
+<rect x="509.60" y="186" width="113.20" height="10" fill="#8957E5"/>
+<rect x="624.80" y="186" width="113.20" height="10" fill="url(#f0)"/>
+</g>
+<text x="816" y="196" text-anchor="end" font-size="14" font-weight="700" fill="#e6edf3">80% AI</text>
+<rect x="168" y="207" width="9" height="9" rx="2" fill="#D97757"/>
+<text x="181" y="216" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Claude</tspan> 60%</text>
+<rect x="262.192" y="207" width="9" height="9" rx="2" fill="#8957E5"/>
+<text x="275.192" y="216" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">GitHub Copilot</tspan> 20%</text>
+<rect x="399.8864" y="207" width="9" height="9" rx="2" fill="url(#f0)"/>
+<text x="412.8864" y="216" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Human</tspan> 20%</text>
+<text x="24" y="249" font-size="14" font-weight="600" fill="#e6edf3">Docs</text>
+<clipPath id="c3"><rect x="168" y="240" width="570" height="10" rx="5"/></clipPath><g clip-path="url(#c3)">
+<rect x="168.00" y="240" width="254.70" height="10" fill="#10A37F"/>
+<rect x="424.70" y="240" width="198.10" height="10" fill="#D97757"/>
+<rect x="624.80" y="240" width="113.20" height="10" fill="url(#f0)"/>
+</g>
+<text x="816" y="250" text-anchor="end" font-size="14" font-weight="700" fill="#e6edf3">80% AI</text>
+<rect x="168" y="261" width="9" height="9" rx="2" fill="#10A37F"/>
+<text x="181" y="270" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">ChatGPT</tspan> 45%</text>
+<rect x="274.6576" y="261" width="9" height="9" rx="2" fill="#D97757"/>
+<text x="287.6576" y="270" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Claude</tspan> 35%</text>
+<rect x="368.8496" y="261" width="9" height="9" rx="2" fill="url(#f0)"/>
+<text x="381.8496" y="270" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Human</tspan> 20%</text>
+<text x="24" y="303" font-size="14" font-weight="600" fill="#e6edf3">Ideas &amp; design</text>
+<clipPath id="c4"><rect x="168" y="294" width="570" height="10" rx="5"/></clipPath><g clip-path="url(#c4)">
+<rect x="168.00" y="294" width="141.50" height="10" fill="#10A37F"/>
+<rect x="311.50" y="294" width="113.20" height="10" fill="url(#f2)"/>
+<rect x="426.70" y="294" width="311.30" height="10" fill="url(#f0)"/>
+</g>
+<text x="816" y="304" text-anchor="end" font-size="14" font-weight="700" fill="#e6edf3">45% AI</text>
+<rect x="168" y="315" width="9" height="9" rx="2" fill="#10A37F"/>
+<text x="181" y="324" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">ChatGPT</tspan> 25%</text>
+<rect x="274.6576" y="315" width="9" height="9" rx="2" fill="url(#f2)"/>
+<text x="287.6576" y="324" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Gemini</tspan> 20%</text>
+<rect x="369.6128" y="315" width="9" height="9" rx="2" fill="url(#f0)"/>
+<text x="382.6128" y="324" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Human</tspan> 55%</text>
+<text x="24" y="357" font-size="14" font-weight="600" fill="#e6edf3">Images</text>
+<clipPath id="c5"><rect x="168" y="348" width="570" height="10" rx="5"/></clipPath><g clip-path="url(#c5)">
+<rect x="168.00" y="348" width="282.00" height="10" fill="#E7E7E7"/>
+<rect x="452.00" y="348" width="141.00" height="10" fill="url(#f3)"/>
+<rect x="595.00" y="348" width="84.60" height="10" fill="#FBBC04"/>
+<rect x="681.60" y="348" width="56.40" height="10" fill="url(#f0)"/>
+</g>
+<text x="816" y="358" text-anchor="end" font-size="14" font-weight="700" fill="#e6edf3">~90% AI</text>
+<rect x="168" y="369" width="9" height="9" rx="2" fill="#E7E7E7"/>
+<text x="181" y="378" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Midjourney</tspan> 50%</text>
+<rect x="287.632" y="369" width="9" height="9" rx="2" fill="url(#f3)"/>
+<text x="300.632" y="378" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Flux</tspan> 25%</text>
+<rect x="368.0864" y="369" width="9" height="9" rx="2" fill="#FBBC04"/>
+<text x="381.0864" y="378" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Nano Banana</tspan> 15%</text>
+<rect x="498.14880000000005" y="369" width="9" height="9" rx="2" fill="url(#f0)"/>
+<text x="511.14880000000005" y="378" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Human</tspan> 10%</text>
+<text x="24" y="411" font-size="14" font-weight="600" fill="#e6edf3">Audio</text>
+<clipPath id="c6"><rect x="168" y="402" width="570" height="10" rx="5"/></clipPath><g clip-path="url(#c6)">
+<rect x="168.00" y="402" width="339.60" height="10" fill="#E7E7E7"/>
+<rect x="509.60" y="402" width="141.50" height="10" fill="url(#f4)"/>
+<rect x="653.10" y="402" width="84.90" height="10" fill="url(#f0)"/>
+</g>
+<text x="816" y="412" text-anchor="end" font-size="14" font-weight="700" fill="#e6edf3">85% AI</text>
+<rect x="168" y="423" width="9" height="9" rx="2" fill="#E7E7E7"/>
+<text x="181" y="432" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Suno</tspan> 60%</text>
+<rect x="251.7616" y="423" width="9" height="9" rx="2" fill="url(#f4)"/>
+<text x="264.7616" y="432" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">ElevenLabs</tspan> 25%</text>
+<rect x="374.9552" y="423" width="9" height="9" rx="2" fill="url(#f0)"/>
+<text x="387.9552" y="432" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Human</tspan> 15%</text>
+<text x="24" y="465" font-size="14" font-weight="600" fill="#e6edf3">Video</text>
+<clipPath id="c7"><rect x="168" y="456" width="570" height="10" rx="5"/></clipPath><g clip-path="url(#c7)">
+<rect x="168.00" y="456" width="283.00" height="10" fill="#4285F4"/>
+<rect x="453.00" y="456" width="169.80" height="10" fill="#E7E7E7"/>
+<rect x="624.80" y="456" width="113.20" height="10" fill="url(#f0)"/>
+</g>
+<text x="816" y="466" text-anchor="end" font-size="14" font-weight="700" fill="#e6edf3">80% AI</text>
+<rect x="168" y="477" width="9" height="9" rx="2" fill="#4285F4"/>
+<text x="181" y="486" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Veo</tspan> 50%</text>
+<rect x="244.8928" y="477" width="9" height="9" rx="2" fill="#E7E7E7"/>
+<text x="257.89279999999997" y="486" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Runway</tspan> 30%</text>
+<rect x="346.4624" y="477" width="9" height="9" rx="2" fill="url(#f0)"/>
+<text x="359.4624" y="486" font-size="12" fill="#9198a1"><tspan font-weight="600" fill="#e6edf3">Human</tspan> 20%</text>
+<line x1="24" y1="510" x2="816" y2="510" stroke="#3d444d"/>
+<text x="24" y="530" font-size="11" fill="#9198a1">~ estimated · clanker-index-badge</text>
+</g>
+</svg>

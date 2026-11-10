@@ -1,0 +1,18 @@
+name: Clanker Index
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  badge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: ./   # this repo dogfoods its own action; yours would use LuminoOwO/clanker-index-badge@v1

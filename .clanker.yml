@@ -1,0 +1,8 @@
+# This repo's own badge.
+style: clanker
+categories:
+  code: auto
+  tests: auto
+  docs: auto
+  bugfix: auto
+  ideas: { human: 50, claude: 50, estimated: true }

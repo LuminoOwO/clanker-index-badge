@@ -1,0 +1,22 @@
+name: Clanker Index Badge
+description: Badge showing how much of your repo each AI made, per category (code, bug fixing, tests, docs, media, ...).
+author: LuminoOwO
+branding:
+  icon: cpu
+  color: yellow
+inputs:
+  config:
+    description: Path to the config file.
+    default: .clanker.yml
+  out:
+    description: Folder the badges are written to.
+    default: .clanker
+  commit:
+    description: Commit and push the updated badges ("true" or "false").
+    default: "true"
+  commit-message:
+    description: Message for that commit.
+    default: "chore: update clanker index"
+runs:
+  using: node24
+  main: dist/action.js

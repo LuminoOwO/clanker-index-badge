@@ -1,0 +1,8 @@
+# Sample: a music app. Lots of generated media.
+style: clanker
+categories:
+  code:   { gemini: 40, claude: 20, human: 40 }
+  ideas:  { claude: 30, human: 70 }
+  images: { firefly: 40, gpt-image: 30, human: 30 }
+  audio:  { suno: 45, udio: 30, stable audio: 10, human: 15 }
+  video:  { sora: 40, kling: 35, human: 25 }
