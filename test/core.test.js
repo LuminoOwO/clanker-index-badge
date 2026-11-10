@@ -71,7 +71,7 @@ test('renders valid-looking SVG in all four variants', () => {
   ] };
   for (const style of ['clanker', 'serious']) for (const theme of ['light', 'dark']) {
     const svg = render(data, style, theme);
-    assert.match(svg, /^<svg [^>]*viewBox="0 0 840 \d+"/);
+    assert.match(svg, /^<svg [^>]*viewBox="0 0 720 \d+"/);
     assert.ok(!/NaN|undefined/.test(svg), `${style}-${theme} has NaN/undefined`);
     assert.ok(svg.includes('~90%'));
   }

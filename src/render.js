@@ -1,6 +1,6 @@
 import { MODEL_BY_ID, displayName } from './palette.js';
 
-const W = 840;
+const W = 720;
 
 const THEMES = {
   serious: {
@@ -124,7 +124,7 @@ function segments(shares, x, width, gap) {
 
 function describe(data, style) {
   const parts = data.categories.map((c) => `${c.label}: ${c.ai}% AI (${c.shares.map((s) => `${displayName(s.id, 'serious')} ${s.p}%`).join(', ')})`);
-  const head = style === 'clanker' ? 'Clanker Index' : 'AI contribution by category';
+  const head = style === 'clanker' ? 'Clanker Index' : 'AI contribution';
   return `${head}${data.overall != null ? `, ${data.overall}% AI overall` : ''}. ${parts.join('; ')}.`;
 }
 
@@ -150,111 +150,90 @@ function emptyState(style, theme, data) {
   return wrap(style, theme, 72, body, fills, data);
 }
 
-function renderSerious(data, theme) {
-  const t = THEMES.serious[theme];
-  const fills = new Fills(theme, 'serious');
-  const P = 24;
-  const out = [];
-  let y = P;
+// One line per category: label in front, bar in the middle, % at the end.
+// Names and percentages sit inside the bar where they fit; one shared color
+// key at the bottom names every AI.
+function compactRows({ data, theme, style, fills, t, out, y, P }) {
+  const clanker = style === 'clanker';
+  const labelOf = (c) => (clanker ? c.label.toUpperCase() : c.label);
+  const labelWidth = (s) => (clanker ? monoWidth(s, 12, 1) : sansWidth(s, 13, true));
+  const textWidth = (s) => (clanker ? monoWidth(s, 11) : sansWidth(s, 11, true));
+  const pctText = (c) => `${c.estimated ? '~' : ''}${c.ai}%${clanker ? '' : ' AI'}`;
 
-  out.push(`<text x="${P}" y="${y + 18}" font-size="18" font-weight="600" fill="${t.text}">${esc(data.title || 'AI contribution by category')}</text>`);
-  if (data.overall != null) {
-    out.push(`<text x="${W - P}" y="${y + 18}" text-anchor="end" font-size="14" fill="${t.muted}"><tspan font-size="20" font-weight="700" fill="${t.text}">${data.overall}%</tspan> AI overall</text>`);
-  }
-  y += 34;
-  out.push(`<line x1="${P}" y1="${y}" x2="${W - P}" y2="${y}" stroke="${t.divider}"/>`);
-  y += 18;
+  const labelW = Math.ceil(Math.max(...data.categories.map((c) => labelWidth(labelOf(c))))) + 14;
+  const pctW = Math.ceil(Math.max(...data.categories.map((c) => (clanker ? monoWidth(pctText(c), 13) : sansWidth(pctText(c), 13, true))))) + 12;
+  const bx = P + labelW;
+  const bw = W - P - pctW - bx;
+  const barH = clanker ? 22 : 18;
+  const pitch = barH + 8;
 
-  const bx = P + 144;
-  const bw = W - P - 78 - bx;
   data.categories.forEach((cat, ci) => {
-    out.push(`<text x="${P}" y="${y + 11}" font-size="14" font-weight="600" fill="${t.text}">${esc(cat.label)}</text>`);
-    out.push(`<clipPath id="c${ci}"><rect x="${bx}" y="${y + 2}" width="${bw}" height="10" rx="5"/></clipPath><g clip-path="url(#c${ci})">`);
-    for (const s of segments(cat.shares, bx, bw, 2)) out.push(`<rect x="${s.x.toFixed(2)}" y="${y + 2}" width="${s.w.toFixed(2)}" height="10" fill="${fills.get(s.id).fill}"/>`);
-    out.push('</g>');
-    out.push(`<text x="${W - P}" y="${y + 12}" text-anchor="end" font-size="14" font-weight="700" fill="${t.text}">${cat.estimated ? '~' : ''}${cat.ai}% AI</text>`);
-
-    let cx = bx;
-    let cy = y + 32;
-    for (const s of cat.shares) {
-      const name = displayName(s.id, 'serious');
-      const w = 13 + sansWidth(name, 12, true) + 4 + sansWidth(`${s.p}%`, 12);
-      if (cx + w > W - P && cx > bx) { cx = bx; cy += 18; }
-      out.push(`<rect x="${cx}" y="${cy - 9}" width="9" height="9" rx="2" fill="${fills.get(s.id).fill}"/>`);
-      out.push(`<text x="${cx + 13}" y="${cy}" font-size="12" fill="${t.muted}"><tspan font-weight="600" fill="${t.text}">${esc(name)}</tspan> ${s.p}%</text>`);
-      cx += w + 14;
+    const mid = y + barH / 2;
+    out.push(`<text x="${P}" y="${mid + 4.5}" font-size="${clanker ? 12 : 13}" font-weight="${clanker ? 700 : 600}"${clanker ? ' letter-spacing="1"' : ''} fill="${t.text}">${esc(labelOf(cat))}</text>`);
+    if (!clanker) out.push(`<clipPath id="c${ci}"><rect x="${bx}" y="${y}" width="${bw}" height="${barH}" rx="4"/></clipPath><g clip-path="url(#c${ci})">`);
+    for (const s of segments(cat.shares, bx, bw, 2)) {
+      const f = fills.get(s.id);
+      out.push(`<rect x="${s.x.toFixed(2)}" y="${y}" width="${s.w.toFixed(2)}" height="${barH}"${clanker ? ' rx="2"' : ''} fill="${f.fill}"/>`);
+      const full = `${displayName(s.id, style)} ${s.p}%`;
+      const label = textWidth(full) + 12 <= s.w ? full : textWidth(`${s.p}%`) + 10 <= s.w ? `${s.p}%` : null;
+      if (!label) continue;
+      const tw = textWidth(label);
+      if (f.chip) out.push(`<rect x="${(s.x + 3).toFixed(2)}" y="${mid - 7}" width="${(tw + 6).toFixed(1)}" height="14" rx="2" fill="${f.chip}"/>`);
+      out.push(`<text x="${(s.x + 6).toFixed(2)}" y="${mid + 4}" font-size="11" font-weight="${clanker ? 700 : 600}" fill="${f.text}">${esc(label)}</text>`);
     }
-    y = cy + 22;
+    if (!clanker) out.push('</g>');
+    out.push(`<text x="${W - P}" y="${mid + 4.5}" text-anchor="end" font-size="13" font-weight="${clanker ? 800 : 700}" fill="${t.accent}">${pctText(cat)}</text>`);
+    y += pitch;
   });
 
-  y += 2;
-  out.push(`<line x1="${P}" y1="${y}" x2="${W - P}" y2="${y}" stroke="${t.divider}"/>`);
-  const note = data.categories.some((c) => c.estimated) ? '~ estimated · ' : '';
-  out.push(`<text x="${P}" y="${y + 20}" font-size="11" fill="${t.muted}">${note}clanker-index-badge</text>`);
-  return wrap('serious', theme, y + 34, out, fills, data);
+  // Shared color key.
+  y += 4;
+  out.push(`<line x1="${P}" y1="${y}" x2="${W - P}" y2="${y}" stroke="${t.divider}"${clanker ? ' stroke-width="2" stroke-dasharray="6 4"' : ''}/>`);
+  y += 18;
+  const seen = [];
+  for (const c of data.categories) for (const s of c.shares) if (!seen.includes(s.id)) seen.push(s.id);
+  const ai = seen.filter((id) => id !== 'human' && id !== 'other');
+  const keys = [...ai, ...seen.filter((id) => id === 'other'), ...seen.filter((id) => id === 'human')];
+  const credit = `${data.categories.some((c) => c.estimated) ? '~ estimated · ' : ''}clanker-index-badge`;
+  const creditW = clanker ? monoWidth('> ' + credit, 10) : sansWidth(credit, 10);
+  let cx = P;
+  for (const id of keys) {
+    const name = displayName(id, style);
+    const w = 13 + textWidth(name);
+    if (cx + w > W - P && cx > P) { cx = P; y += 17; }
+    out.push(`<rect x="${cx}" y="${y - 8.5}" width="9" height="9" rx="${clanker ? 0 : 2}" fill="${fills.get(id).fill}"/>`);
+    out.push(`<text x="${cx + 13}" y="${y}" font-size="11" fill="${t.muted}">${esc(name)}</text>`);
+    cx += w + 14;
+  }
+  if (cx + creditW > W - P) y += 17;
+  out.push(`<text x="${W - P}" y="${y}" text-anchor="end" font-size="10" fill="${t.muted}">${clanker ? '&gt; ' : ''}${esc(credit)}</text>`);
+  return y;
 }
 
-function renderClanker(data, theme) {
-  const t = THEMES.clanker[theme];
-  const fills = new Fills(theme, 'clanker');
-  const P = 24;
-  const out = [];
-  let y = P;
-
-  out.push(`<text x="${P}" y="${y + 20}" font-size="20" font-weight="800" letter-spacing="1" fill="${t.text}">${esc((data.title || 'Clanker Index').toUpperCase())}</text>`);
+function header({ data, style, t, out, P }) {
+  const clanker = style === 'clanker';
+  const title = data.title || (clanker ? 'Clanker Index' : 'AI contribution');
+  out.push(clanker
+    ? `<text x="${P}" y="${P + 13}" font-size="15" font-weight="800" letter-spacing="1" fill="${t.text}">${esc(title.toUpperCase())}</text>`
+    : `<text x="${P}" y="${P + 13}" font-size="15" font-weight="600" fill="${t.text}">${esc(title)}</text>`);
   if (data.overall != null) {
-    out.push(`<text x="${W - P}" y="${y + 20}" text-anchor="end" font-size="14" fill="${t.muted}"><tspan font-size="22" font-weight="800" fill="${t.accent}">${data.overall}%</tspan> clanker overall</text>`);
+    out.push(`<text x="${W - P}" y="${P + 13}" text-anchor="end" font-size="12" fill="${t.muted}"><tspan font-size="17" font-weight="800" fill="${t.accent}">${data.overall}%</tspan> ${clanker ? 'clanker' : 'AI'} overall</text>`);
   }
-  y += 34;
-  out.push(`<line x1="${P}" y1="${y}" x2="${W - P}" y2="${y}" stroke="${t.divider}" stroke-width="2" stroke-dasharray="6 4"/>`);
-  y += 16;
+  return P + 28;
+}
 
-  data.categories.forEach((cat) => {
-    const label = cat.label.toUpperCase();
-    const pct = `${cat.estimated ? '~' : ''}${cat.ai}%`;
-    const labelEnd = P + monoWidth(label, 13, 1);
-    const rightStart = W - P - monoWidth(pct + ' clanker', 13);
-    out.push(`<text x="${P}" y="${y + 13}" font-size="13" font-weight="700" letter-spacing="1" fill="${t.text}">${esc(label)}</text>`);
-    if (rightStart - labelEnd > 24) {
-      out.push(`<line x1="${(labelEnd + 10).toFixed(1)}" y1="${y + 9}" x2="${(rightStart - 10).toFixed(1)}" y2="${y + 9}" stroke="${t.divider}" stroke-width="2" stroke-dasharray="2 4" stroke-linecap="round"/>`);
-    }
-    out.push(`<text x="${W - P}" y="${y + 13}" text-anchor="end" font-size="13" fill="${t.muted}"><tspan font-weight="800" fill="${t.accent}">${pct}</tspan> clanker</text>`);
-
-    const by = y + 22;
-    for (const s of segments(cat.shares, P, W - 2 * P, 2)) {
-      const f = fills.get(s.id);
-      out.push(`<rect x="${s.x.toFixed(2)}" y="${by}" width="${s.w.toFixed(2)}" height="26" rx="2" fill="${f.fill}"/>`);
-      const text = `${displayName(s.id, 'clanker')} ${s.p}%`;
-      const tw = monoWidth(text, 11);
-      if (tw + 16 <= s.w) {
-        if (f.chip) out.push(`<rect x="${(s.x + 5).toFixed(2)}" y="${by + 6}" width="${(tw + 8).toFixed(1)}" height="14" rx="2" fill="${f.chip}"/>`);
-        out.push(`<text x="${(s.x + 9).toFixed(2)}" y="${by + 17}" font-size="11" font-weight="700" fill="${f.text}">${esc(text)}</text>`);
-      }
-    }
-    y = by + 26 + 16;
-
-    const hidden = segments(cat.shares, P, W - 2 * P, 2).filter((s) => monoWidth(`${displayName(s.id, 'clanker')} ${s.p}%`, 11) + 16 > s.w);
-    if (hidden.length) {
-      let cx = P;
-      for (const s of hidden) {
-        const name = displayName(s.id, 'clanker');
-        const w = 13 + monoWidth(`${name} ${s.p}%`, 11);
-        if (cx + w > W - P && cx > P) { cx = P; y += 16; }
-        out.push(`<rect x="${cx}" y="${y - 8}" width="9" height="9" fill="${fills.get(s.id).fill}"/>`);
-        out.push(`<text x="${cx + 13}" y="${y}" font-size="11" fill="${t.muted}"><tspan fill="${t.text}">${esc(name)}</tspan> ${s.p}%</text>`);
-        cx += w + 16;
-      }
-      y += 18;
-    }
-  });
-
-  const note = data.categories.some((c) => c.estimated) ? '~ estimated · ' : '';
-  out.push(`<text x="${P}" y="${y + 6}" font-size="11" fill="${t.muted}">&gt; ${note}clanker-index-badge</text>`);
-  return wrap('clanker', theme, y + 24, out, fills, data);
+function renderStyle(data, theme, style) {
+  const t = THEMES[style][theme];
+  const fills = new Fills(theme, style);
+  const P = 16;
+  const out = [];
+  const y = header({ data, style, t, out, P });
+  const end = compactRows({ data, theme, style, fills, t, out, y, P });
+  return wrap(style, theme, end + P - 2, out, fills, data);
 }
 
 /** Render one badge. style: 'clanker' | 'serious', theme: 'light' | 'dark'. */
 export function render(data, style, theme) {
   if (!data.categories.length) return emptyState(style, theme, data);
-  return style === 'clanker' ? renderClanker(data, theme) : renderSerious(data, theme);
+  return renderStyle(data, theme, style);
 }
